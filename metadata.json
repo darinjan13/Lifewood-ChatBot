@@ -1,0 +1,7 @@
+{
+  "name": "Lifewood AI Chat Pro",
+  "description": "An advanced branded chatbot for Lifewood with multi-conversation support, persona switching, and file uploads.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

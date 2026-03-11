@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifewood Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lifewood-beige: #f5eedb;
+            --lifewood-green: #133020;
+            --lifewood-saffron: #FFB347;
+            --lifewood-castleton: #046241;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--lifewood-beige);
+            color: var(--lifewood-green);
+        }
+        .font-google { font-family: 'Google Sans', sans-serif; }
+        .font-serif { font-family: 'Lora', serif; }
+        
+        .lifewood-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .lifewood-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .lifewood-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(19, 48, 32, 0.1);
+            border-radius: 10px;
+        }
+        .lifewood-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(19, 48, 32, 0.2);
+        }
+        
+        /* Smooth transitions for menus */
+        .popover-enter {
+            animation: popover-in 0.2s ease-out;
+        }
+        @keyframes popover-in {
+            from { opacity: 0; transform: translateY(10px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .input-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(19, 48, 32, 0.08) !important;
+            box-shadow: 0 10px 40px -10px rgba(19, 48, 32, 0.1);
+            outline: none !important;
+        }
+        
+        textarea:focus {
+            outline: none !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Markdown Styles */
+        .markdown-content p { margin-bottom: 1rem; }
+        .markdown-content p:last-child { margin-bottom: 0; }
+        .markdown-content ul { list-style-type: none; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .markdown-content li { position: relative; margin-bottom: 0.5rem; }
+        .markdown-content li::before {
+            content: "•";
+            color: var(--lifewood-saffron);
+            font-weight: bold;
+            display: inline-block;
+            width: 1rem;
+            margin-left: -1rem;
+            position: absolute;
+        }
+        .markdown-content strong { font-weight: 700; color: var(--lifewood-saffron); }
+        .markdown-content code { 
+            font-family: monospace; 
+            background: rgba(0,0,0,0.05); 
+            padding: 0.2rem 0.4rem; 
+            border-radius: 0.4rem; 
+            font-size: 0.9em;
+        }
+        .dark .markdown-content code { background: rgba(255,255,255,0.1); }
+        .markdown-content pre {
+            background: #0d2116;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 1rem;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            font-size: 0.85em;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .markdown-content a {
+            color: var(--lifewood-saffron);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react-markdown": "https://esm.sh/react-markdown@^9.0.1",
+    "remark-gfm": "https://esm.sh/remark-gfm@^4.0.0"
+  }
+}
+</script>
+</head>
+<body class="m-0 p-0 overflow-hidden">
+    <div id="root"></div>
+</body>
+</html>
